@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -16,12 +18,18 @@ class HomePage extends StatelessWidget {
           ),
         ),
         backgroundColor: Colors.white,
-        elevation: 1.5,
+        elevation: 0.0,
         centerTitle: true,
         leading: Container(
           margin: EdgeInsets.all(10),
+          alignment: Alignment.center,
+          child: SvgPicture.asset(
+            'assets/icons/Arrow - Left 2.svg',
+            height:20,
+            width: 20,
+            ),
           decoration: BoxDecoration(
-            color: Colors.black,
+            color: Color(0xffF7F8F8),
             borderRadius: BorderRadius.circular(10)
           ),
         ),
