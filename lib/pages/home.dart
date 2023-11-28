@@ -11,13 +11,27 @@ class HomePage extends StatelessWidget {
         appBar: appBar(),
         backgroundColor: Colors.white,
         body: Column(
-          children: _searchField,
+          children: [
+            _searchField(),
+            SizedBox(height: 40,),
+            Column(
+              children: [
+                Text(
+                  'Category',
+                  style: TextStyle(
+                    color:Colors.black,
+                    fontSize: 18,
+                    fontWeight: FontWeight.w600
+                  )
+                )
+              ],
+            )
+          ],
         ));
   }
 
-  List<Widget> get _searchField {
-    return [
-          Container(
+  Container _searchField() {
+    return Container(
             margin: EdgeInsets.only(top: 40, left: 20, right: 20),
             decoration: BoxDecoration(boxShadow: [
               BoxShadow(
@@ -64,8 +78,7 @@ class HomePage extends StatelessWidget {
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(15),
                         borderSide: BorderSide.none))),
-          )
-        ];
+          );
   }
 
   AppBar appBar() {
