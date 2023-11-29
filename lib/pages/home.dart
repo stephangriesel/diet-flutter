@@ -32,18 +32,7 @@ class HomePage extends StatelessWidget {
             SizedBox(
               height: 40,
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 20),
-              child: Column(
-                children: [
-                  Text('Recommendations',
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 18,
-                          fontWeight: FontWeight.w600))
-                ],
-              ),
-            ),
+            _recommendations(),
             SizedBox(
               height: 15,
             ),
@@ -123,6 +112,21 @@ class HomePage extends StatelessWidget {
                     )))
           ],
         ));
+  }
+
+  Padding _recommendations() {
+    return Padding(
+            padding: const EdgeInsets.only(left: 20),
+            child: Column(
+              children: [
+                Text('Recommendations',
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 18,
+                        fontWeight: FontWeight.w600))
+              ],
+            ),
+          );
   }
 
   Column _categoriesSection() {
