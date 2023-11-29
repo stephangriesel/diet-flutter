@@ -94,15 +94,15 @@ class HomePage extends StatelessWidget {
                                     child: Text(
                                       'View',
                                       style: TextStyle(
-                                        color: Colors.white,
+                                        color: diets[index].viewIsSelected ? Colors.white : Colors.transparent,
                                         fontWeight: FontWeight.w500,
                                         fontSize: 14,
                                       )
                                       )),
                                   decoration: BoxDecoration(
                                     gradient: LinearGradient(colors: [
-                                      Color(0xff9DCEFF),
-                                      Color(0xff92A3FD),
+                                      diets[index].viewIsSelected ? Color(0xff9DCEFF) : Colors.transparent,
+                                      diets[index].viewIsSelected ? Color(0xff92A3FD) : Colors.transparent,
                                     ]),
                                     borderRadius: BorderRadius.circular(50)
                                   ),
