@@ -11,7 +11,7 @@ class CategoryModel {
     required this.boxColor,
   });
 
-  List<CategoryModel> getCategories(){
+  static List<CategoryModel> getCategories(){
     List<CategoryModel> categories = [];
 
     categories.add(CategoryModel(name: 'Salad', iconPath: 'assets/icons/plate.svg', boxColor: Color(0xff92A3FD)));
