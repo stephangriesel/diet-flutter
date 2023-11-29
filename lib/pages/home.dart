@@ -1,5 +1,6 @@
 import 'package:dietflutter/models/category_model.dart';
 import 'package:dietflutter/models/diet_model.dart';
+import 'package:dietflutter/models/popular_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter_svg/flutter_svg.dart';
