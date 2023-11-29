@@ -60,16 +60,20 @@ class HomePage extends StatelessWidget {
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Column(
-                            //crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
                               SvgPicture.asset(diets[index].iconPath),
-                              Text(
-                                diets[index].name,
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w500,
-                                  color: Colors.black,
-                                  fontSize: 16,
-                                ),
+                              Column(
+                                children: [
+                                  Text(
+                                    diets[index].name,
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.black,
+                                      fontSize: 16,
+                                    ),
+                                  ),
+                                ],
                               ),
                               Text(
                                   diets[index].level +
@@ -79,9 +83,30 @@ class HomePage extends StatelessWidget {
                                       diets[index].calorie,
                                   style: TextStyle(
                                     color: Colors.black,
-                                    fontSize: 13,
+                                    fontSize: 12,
                                     fontWeight: FontWeight.w500,
-                                  )),
+                                  )
+                                  ),
+                                Container(
+                                  height:45,
+                                  width: 130,
+                                  child: Center(
+                                    child: Text(
+                                      'View',
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.w500,
+                                        fontSize: 14,
+                                      )
+                                      )),
+                                  decoration: BoxDecoration(
+                                    gradient: LinearGradient(colors: [
+                                      Color(0xff9DCEFF),
+                                      Color(0xff92A3FD),
+                                    ]),
+                                    borderRadius: BorderRadius.circular(50)
+                                  ),
+                                )
                             ],
                           ),
                         ),
